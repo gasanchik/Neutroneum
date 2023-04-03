@@ -17,6 +17,7 @@ import org.slf4j.Logger;
 @Mod(Neutroneum.MOD_ID)
 public class Neutroneum
 {
+    //!!TEST!!
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "neutroneum";
     // Directly reference a slf4j logger
