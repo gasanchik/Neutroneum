@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "neutroneum:block/neutroneum_block" }
+  }
+}

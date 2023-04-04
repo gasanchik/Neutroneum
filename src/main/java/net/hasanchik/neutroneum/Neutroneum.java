@@ -1,7 +1,11 @@
 package net.hasanchik.neutroneum;
 
 import com.mojang.logging.LogUtils;
+import net.hasanchik.neutroneum.block.ModBlocks;
+import net.hasanchik.neutroneum.item.ModCreativeModeTabs;
+import net.hasanchik.neutroneum.item.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -25,6 +29,9 @@ public class Neutroneum
     public Neutroneum() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -40,7 +47,23 @@ public class Neutroneum
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
+        //NTS: you can add items to multiple tabs at once
+        if(event.getTab() == ModCreativeModeTabs.NEUTRONEUM_TAB) {
+            event.accept(ModItems.NEUTRONEUM_INGOT);
+            event.accept(ModItems.RAW_NEUTRONEUM);
+            event.accept(ModBlocks.NEUTRONEUM_BLOCK);
+            event.accept(ModBlocks.DEEPSLATE_NEUTRONEUM_ORE);
+            event.accept(ModBlocks.NEUTRONEUM_ORE);
+        }
 
+        if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.NEUTRONEUM_BLOCK);
+        }
+
+        if(event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.DEEPSLATE_NEUTRONEUM_ORE);
+            event.accept(ModBlocks.NEUTRONEUM_ORE);
+        }
     }
 
     /*

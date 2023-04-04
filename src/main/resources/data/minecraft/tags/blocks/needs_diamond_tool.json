@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "neutroneum:neutroneum_ore",
+    "neutroneum:neutroneum_block"
+  ]
+}

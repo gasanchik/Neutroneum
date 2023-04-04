@@ -1,0 +1,10 @@
+{
+  "item.neutroneum.neutroneum_ingot": "Neutroneum ingot",
+  "item.neutroneum.raw_neutroneum": "Raw Neutroneum",
+
+  "block.neutroneum.neutroneum_block": "Block of neutroneum",
+  "block.neutroneum.neutroneum_ore": "Neutroneum ore",
+  "block.neutroneum.deepslate_neutroneum_ore": "Deepslate neutroneum ore",
+
+  "creativemodetab.neutroneum": "Neutroneum items"
+}
