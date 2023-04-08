@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "neutroneum:deepslate_neutroneum_ore"
+    "neutroneum:deepslate_neutroneum_ore",
+    "neutroneum:neutroneum_ore"
   ]
 }

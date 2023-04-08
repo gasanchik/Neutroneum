@@ -4,6 +4,7 @@ import com.mojang.blaze3d.shaders.Uniform;
 import net.hasanchik.neutroneum.Neutroneum;
 import net.hasanchik.neutroneum.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -18,19 +19,20 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModBlocks {
+
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Neutroneum.MOD_ID);
 
     public static final RegistryObject<Block> NEUTRONEUM_BLOCK = registerBlock("neutroneum_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(6f).requiresCorrectToolForDrops()));
+                    .strength(2f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> NEUTRONEUM_ORE = registerBlock("neutroneum_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)));
+                    .strength(15f).requiresCorrectToolForDrops(), UniformInt.of(5, 14)));
     public static final RegistryObject<Block> DEEPSLATE_NEUTRONEUM_ORE = registerBlock("deepslate_neutroneum_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(8f).requiresCorrectToolForDrops(), UniformInt.of(4, 8)));
+                    .strength(30f).requiresCorrectToolForDrops(), UniformInt.of(7, 17)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

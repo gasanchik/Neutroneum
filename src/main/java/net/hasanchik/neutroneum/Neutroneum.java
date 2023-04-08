@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.hasanchik.neutroneum.block.ModBlocks;
 import net.hasanchik.neutroneum.item.ModCreativeModeTabs;
 import net.hasanchik.neutroneum.item.ModItems;
+import net.hasanchik.neutroneum.util.ModItemProperties;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -37,6 +38,7 @@ public class Neutroneum
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.addListener(this::clientSetup);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -51,6 +53,8 @@ public class Neutroneum
         if(event.getTab() == ModCreativeModeTabs.NEUTRONEUM_TAB) {
             event.accept(ModItems.NEUTRONEUM_INGOT);
             event.accept(ModItems.RAW_NEUTRONEUM);
+            event.accept(ModItems.METAL_DETECTOR);
+
             event.accept(ModBlocks.NEUTRONEUM_BLOCK);
             event.accept(ModBlocks.DEEPSLATE_NEUTRONEUM_ORE);
             event.accept(ModBlocks.NEUTRONEUM_ORE);
@@ -64,6 +68,10 @@ public class Neutroneum
             event.accept(ModBlocks.DEEPSLATE_NEUTRONEUM_ORE);
             event.accept(ModBlocks.NEUTRONEUM_ORE);
         }
+
+        if(event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.METAL_DETECTOR);
+        }
     }
 
     /*
@@ -74,6 +82,10 @@ public class Neutroneum
     *    LOGGER.info("HELLO from server starting");
     *}
     */
+
+    private void clientSetup(final FMLClientSetupEvent event) {
+        ModItemProperties.addCustomItemProperties();
+    }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

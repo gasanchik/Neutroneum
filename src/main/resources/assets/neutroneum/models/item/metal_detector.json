@@ -1,0 +1,39 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "neutroneum:item/metal_detector_00"
+    },
+    "overrides": [
+        { "predicate": { "distance": 0 }, "model": "neutroneum:item/metal_detector_00" },
+        { "predicate": { "distance": 1 }, "model": "neutroneum:item/metal_detector_01" },
+        { "predicate": { "distance": 2 }, "model": "neutroneum:item/metal_detector_02" },
+        { "predicate": { "distance": 3 }, "model": "neutroneum:item/metal_detector_03" },
+        { "predicate": { "distance": 4 }, "model": "neutroneum:item/metal_detector_04" },
+        { "predicate": { "distance": 5 }, "model": "neutroneum:item/metal_detector_05" },
+        { "predicate": { "distance": 6 }, "model": "neutroneum:item/metal_detector_06" },
+        { "predicate": { "distance": 7 }, "model": "neutroneum:item/metal_detector_07" },
+        { "predicate": { "distance": 8 }, "model": "neutroneum:item/metal_detector_08" },
+        { "predicate": { "distance": 9 }, "model": "neutroneum:item/metal_detector_09" },
+        { "predicate": { "distance": 10 }, "model": "neutroneum:item/metal_detector_10" },
+        { "predicate": { "distance": 11 }, "model": "neutroneum:item/metal_detector_11" },
+        { "predicate": { "distance": 12 }, "model": "neutroneum:item/metal_detector_12" },
+        { "predicate": { "distance": 13 }, "model": "neutroneum:item/metal_detector_13" },
+        { "predicate": { "distance": 14 }, "model": "neutroneum:item/metal_detector_14" },
+        { "predicate": { "distance": 15 }, "model": "neutroneum:item/metal_detector_15" },
+        { "predicate": { "distance": 16 }, "model": "neutroneum:item/metal_detector_16" },
+        { "predicate": { "distance": 17 }, "model": "neutroneum:item/metal_detector_17" },
+        { "predicate": { "distance": 18 }, "model": "neutroneum:item/metal_detector_18" },
+        { "predicate": { "distance": 19 }, "model": "neutroneum:item/metal_detector_19" },
+        { "predicate": { "distance": 20 }, "model": "neutroneum:item/metal_detector_20" },
+        { "predicate": { "distance": 21 }, "model": "neutroneum:item/metal_detector_21" },
+        { "predicate": { "distance": 22 }, "model": "neutroneum:item/metal_detector_22" },
+        { "predicate": { "distance": 23 }, "model": "neutroneum:item/metal_detector_23" },
+        { "predicate": { "distance": 24 }, "model": "neutroneum:item/metal_detector_24" },
+        { "predicate": { "distance": 25 }, "model": "neutroneum:item/metal_detector_25" },
+        { "predicate": { "distance": 26 }, "model": "neutroneum:item/metal_detector_26" },
+        { "predicate": { "distance": 27 }, "model": "neutroneum:item/metal_detector_27" },
+        { "predicate": { "distance": 28 }, "model": "neutroneum:item/metal_detector_28" },
+        { "predicate": { "distance": 29 }, "model": "neutroneum:item/metal_detector_29" },
+        { "predicate": { "distance": 30 }, "model": "neutroneum:item/metal_detector_30" }
+    ]
+}
