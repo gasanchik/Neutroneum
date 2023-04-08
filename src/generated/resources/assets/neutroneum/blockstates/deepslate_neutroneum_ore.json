@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "neutroneum:block/deepslate_neutroneum_ore"
+    }
+  }
+}

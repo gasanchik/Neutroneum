@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_neutroneum": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "neutroneum:raw_neutroneum"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "neutroneum:neutroneum_ingot_from_smelting_raw_neutroneum"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_neutroneum",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "neutroneum:neutroneum_ingot_from_smelting_raw_neutroneum"
+    ]
+  }
+}

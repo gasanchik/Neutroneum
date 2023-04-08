@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "neutroneum:item/metal_detector_27"
+  }
+}

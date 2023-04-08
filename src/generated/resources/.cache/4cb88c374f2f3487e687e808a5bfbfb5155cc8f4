@@ -1,0 +1,10 @@
+// 1.19.4	2023-04-07T22:53:25.0451712	Block States: neutroneum
+38dcb13f68276ee495fb0ace1e5d7fe52f057f87 assets/neutroneum/blockstates/deepslate_neutroneum_ore.json
+4565a6dcc0548cc57141b2ef40e921c4c0083e9b assets/neutroneum/blockstates/neutroneum_block.json
+d86dc58b7ed5e5c83bb0c2938fc1a0ff49f3eadb assets/neutroneum/blockstates/neutroneum_ore.json
+4aa80d0366149385b8cb5042c0dc7f16e7a60ce5 assets/neutroneum/models/block/deepslate_neutroneum_ore.json
+8d7f3ceaca5ac685e3486ac95a138f4e9110c87c assets/neutroneum/models/block/neutroneum_block.json
+14297fe9625dedbb348b50c6a3a49eff44001b68 assets/neutroneum/models/block/neutroneum_ore.json
+6916720de4b0ae78a4f99ce9005777b22a6d9721 assets/neutroneum/models/item/deepslate_neutroneum_ore.json
+2d8ac4a8c186c1794144ad430e4ba3eb242f2277 assets/neutroneum/models/item/neutroneum_block.json
+13629d712e96d16ce9f8a5a685111e9cea651767 assets/neutroneum/models/item/neutroneum_ore.json

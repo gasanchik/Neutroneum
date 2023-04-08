@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 3.0,
+  "group": "neutroneum",
+  "ingredient": {
+    "item": "neutroneum:deepslate_neutroneum_ore"
+  },
+  "result": "neutroneum:neutroneum_ingot"
+}

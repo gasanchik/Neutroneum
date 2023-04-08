@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "neutroneum:block/neutroneum_ore"
+    }
+  }
+}
