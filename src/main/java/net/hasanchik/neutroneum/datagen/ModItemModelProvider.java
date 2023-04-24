@@ -2,14 +2,13 @@ package net.hasanchik.neutroneum.datagen;
 
 import net.hasanchik.neutroneum.Neutroneum;
 import net.hasanchik.neutroneum.item.ModItems;
-import net.hasanchik.neutroneum.item.custom.MetalDetectorItem;
+import net.hasanchik.neutroneum.item.custom.MetalDetectorItem.MetalDetectorItem;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItemModelProvider extends ItemModelProvider {

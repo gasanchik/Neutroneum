@@ -2,17 +2,22 @@ package net.hasanchik.neutroneum;
 
 import com.mojang.logging.LogUtils;
 import net.hasanchik.neutroneum.block.ModBlocks;
+import net.hasanchik.neutroneum.config.NeutroneumClientConfigs;
+import net.hasanchik.neutroneum.config.NeutroneumCommonConfigs;
 import net.hasanchik.neutroneum.item.ModCreativeModeTabs;
 import net.hasanchik.neutroneum.item.ModItems;
 import net.hasanchik.neutroneum.util.ModItemProperties;
 import net.minecraft.client.Minecraft;
+import net.minecraft.server.packs.resources.PreparableReloadListener;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -22,7 +27,6 @@ import org.slf4j.Logger;
 @Mod(Neutroneum.MOD_ID)
 public class Neutroneum
 {
-    //!!TEST!!
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "neutroneum";
     // Directly reference a slf4j logger
@@ -42,6 +46,9 @@ public class Neutroneum
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, NeutroneumClientConfigs.SPEC, "neutroneum-common.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, NeutroneumCommonConfigs.SPEC, "neutroneum-client.toml");
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -87,15 +94,4 @@ public class Neutroneum
         ModItemProperties.addCustomItemProperties();
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-        }
-    }
 }

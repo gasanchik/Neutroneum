@@ -1,7 +1,7 @@
 package net.hasanchik.neutroneum.item;
 
 import net.hasanchik.neutroneum.Neutroneum;
-import net.hasanchik.neutroneum.item.custom.MetalDetectorItem;
+import net.hasanchik.neutroneum.item.custom.MetalDetectorItem.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
